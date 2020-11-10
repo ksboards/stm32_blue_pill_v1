@@ -1,0 +1,1 @@
+# stm32_blue_pill_v1

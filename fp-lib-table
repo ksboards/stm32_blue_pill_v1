@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name STM32_blue_pill)(type KiCad)(uri "C:/Users/khadija_pc/Desktop/PCB design/tuto-kicad/STM32_blue_pill.pretty")(options "")(descr ""))
+)

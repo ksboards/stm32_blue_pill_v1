@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name blue_pill_library)(type Legacy)(uri ${KIPRJMOD}/blue_pill_library.lib)(options "")(descr ""))
+  (lib (name STM32_blue_pill-rescue)(type Legacy)(uri ${KIPRJMOD}/STM32_blue_pill-rescue.lib)(options "")(descr ""))
+)

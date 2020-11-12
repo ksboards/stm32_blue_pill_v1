@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_ST_STM32F1:STM32F103C8Tx U1
+L STM32_blue_pill-rescue:STM32F103C8Tx-MCU_ST_STM32F1 U1
 U 1 1 5F5B809C
 P 2600 5650
 F 0 "U1" H 2550 3900 50  0000 C CNN
@@ -169,17 +169,6 @@ Wire Notes Line width 39 style solid
 Wire Notes Line
 	3600 3050 3650 3050
 $Comp
-L Switch:SW_MEC_5G SW1
-U 1 1 5F5D43AC
-P 4050 1850
-F 0 "SW1" V 4096 1802 50  0000 R CNN
-F 1 "SW_MEC_5G" V 4005 1802 50  0000 R CNN
-F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_CK_KMR2" H 4050 2050 50  0001 C CNN
-F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 4050 2050 50  0001 C CNN
-	1    4050 1850
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR01
 U 1 1 5F5D49AE
 P 4600 2250
@@ -195,14 +184,10 @@ Wire Wire Line
 Wire Wire Line
 	4600 2000 4600 2100
 Wire Wire Line
-	4050 2050 4050 2100
-Wire Wire Line
 	4050 2100 4600 2100
 Connection ~ 4600 2100
 Wire Wire Line
 	4600 2100 4600 2250
-Wire Wire Line
-	4050 1650 4050 1550
 Wire Wire Line
 	4050 1550 4600 1550
 Connection ~ 4600 1550
@@ -293,8 +278,6 @@ Connection ~ 10300 1650
 Wire Wire Line
 	10300 2450 10300 2350
 Connection ~ 10300 2350
-Text Label 1800 850  0    50   ~ 0
-VBAT
 Text Label 1800 950  0    50   ~ 0
 PC13
 Text Label 1800 1050 0    50   ~ 0
@@ -356,9 +339,9 @@ PB3
 Text Label 2750 1850 2    50   ~ 0
 PA15
 Text Label 2750 1950 2    50   ~ 0
-PA12
+USB_CPU_P
 Text Label 2750 2050 2    50   ~ 0
-PA11
+USB_CPU_N
 Text Label 2750 2150 2    50   ~ 0
 PA10
 Text Label 2750 2250 2    50   ~ 0
@@ -406,9 +389,9 @@ PA9
 Text Label 3200 6450 0    50   ~ 0
 PA10
 Text Label 3200 6550 0    50   ~ 0
-PA11
+USB_CPU_N
 Text Label 3200 6650 0    50   ~ 0
-PA12
+USB_CPU_P
 Text Label 1900 4550 2    50   ~ 0
 BOOT0
 Text Label 1900 4350 2    50   ~ 0
@@ -607,8 +590,6 @@ Text Label 6100 5700 0    50   ~ 0
 OSCOUT
 Text Label 6100 4400 0    50   ~ 0
 OSCIN
-Wire Wire Line
-	5200 4850 5200 5250
 Wire Wire Line
 	5650 4400 5200 4400
 Connection ~ 5650 4400
@@ -894,9 +875,9 @@ Wire Wire Line
 Text Label 8750 5600 1    50   ~ 0
 5V
 Text Label 9200 6000 2    50   ~ 0
-PA11
+USB_CPU_N
 Text Label 9200 5900 2    50   ~ 0
-PA12
+USB_CPU_P
 Connection ~ 8750 5900
 Wire Wire Line
 	8750 5900 9200 5900
@@ -993,4 +974,24 @@ Text Label 7950 5900 0    50   ~ 0
 USB_P
 Text Label 7950 6000 0    50   ~ 0
 USB_N
+$Comp
+L SwedishEmbedded:JP_Jumper_Small JP1
+U 1 1 5FF3BC37
+P 4050 1825
+F 0 "JP1" V 4050 1873 50  0000 L CNN
+F 1 "JP_Jumper_Small" H 4050 1575 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 4450 1575 50  0001 C CNN
+F 3 "~" H 4050 1825 50  0001 C CNN
+F 4 "#" H 4050 1825 50  0001 C CNN "MPN"
+	1    4050 1825
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 1550 4050 1725
+Wire Wire Line
+	4050 1925 4050 2100
+Wire Wire Line
+	5200 4850 5200 5250
+Text Label 1800 850  0    50   ~ 0
+VBAT
 $EndSCHEMATC

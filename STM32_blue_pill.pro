@@ -1,4 +1,4 @@
-update=11/09/2020 20:09:50
+update=Thu 12 Nov 2020 07:59:02 PM CET
 version=1
 last_client=kicad
 [general]
@@ -26,7 +26,7 @@ ERC_TestSimilarLabels=1
 version=1
 PageLayoutDescrFile=
 LastNetListRead=
-CopperLayerCount=2
+CopperLayerCount=4
 BoardThickness=1.6
 AllowMicroVias=0
 AllowBlindVias=0
@@ -39,8 +39,12 @@ MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.25
+TrackWidth2=0.2
+TrackWidth3=0.3
 ViaDiameter1=0.8
 ViaDrill1=0.4
+ViaDiameter2=0.5
+ViaDrill2=0.3
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
@@ -57,7 +61,7 @@ CopperTextThickness=0.3
 CopperTextItalic=0
 CopperTextUpright=1
 EdgeCutLineWidth=0.3
-CourtyardLineWidth=0.25
+CourtyardLineWidth=0.05
 OthersLineWidth=0.15
 OthersTextSizeV=1
 OthersTextSizeH=1
@@ -73,13 +77,13 @@ Name=F.Cu
 Type=0
 Enabled=1
 [pcbnew/Layer.In1.Cu]
-Name=In1.Cu
+Name=GND
 Type=0
-Enabled=0
+Enabled=1
 [pcbnew/Layer.In2.Cu]
-Name=In2.Cu
+Name=3V3
 Type=0
-Enabled=0
+Enabled=1
 [pcbnew/Layer.In3.Cu]
 Name=In3.Cu
 Type=0
